@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nextjs-cd
+  name: reactv_cd
   labels:
-    app: nextjs-cd
+    app: reactv_cd
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nextjs-cd
+      app: reactv_cd
   template:
     metadata:
       labels:
-        app: nextjs-cd
+        app: reactv_cd
     spec:
       containers:
         - name: nextjs-container
           image: neathtan/nextjs-adv:0
           ports:
-            - containerPort: 3000
+            - containerPort:  5173
